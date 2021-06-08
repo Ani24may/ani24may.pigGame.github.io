@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* 1rem=16px */
+/* 10px=10/16= 0.625rem*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 100% =16rem default font size */
+  /* what if we want 10rem as default font size */
+  /* so we will divide the 10/16=.625*100=62.5 */
+  font-size: 100%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: #333;
+  height: 100vh;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  width: 70%;
+  height: 70%;
+
+  display: flex;
+
+  background: #ffccee;
+  /* opacity: 0.3; */
+}
+.player {
+  width: 50%;
+  height: 100%;
+  border: #333 solid 0.06rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.player-heading {
+  font-size: 3rem;
+  color: black;
+}
+
+.score {
+  font-size: 4rem;
+  color: aqua;
+}
+
+.current {
+  background: #ff339c;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.6rem;
+}
+
+.current-h4 {
+  font-size: 2rem;
+  margin: 0.6rem;
+  color: white;
+}
+
+.current-h5 {
+  font-size: 2rem;
+  margin: 0.6rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+.btn {
+  background: white;
+  text-align: center;
+  padding: 0.6rem 1.8rem;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 50px;
+  border: #bf2e34 dotted 0.06rem;
+  position: absolute;
+
+  opacity: 0.7;
+}
+
+.btn-position-1 {
+  top: 20%;
+}
+
+.btn-position-2 {
+  top: 62%;
+}
+
+.btn-position-3 {
+  top: 70%;
+}
+
+.dice {
+  position: absolute;
+  height: 6rem;
+  top: 40%;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 0.1rem 0.1rem 1.3rem 0.06rem rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+
+@media (max-width: 998px) {
+  html {
+    font-size: 45%;
+  }
+  .main-container {
+    height: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+  .main-container {
+    height: 50%;
+  }
+}
